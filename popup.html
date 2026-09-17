@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Follow Checker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Instagram 差集</h1>
+    <a href="guide.html" target="_blank" rel="noopener">安装与使用说明</a>
+    <p id="status">请打开自己的 Instagram 个人主页。</p>
+    <div class="actions">
+      <button id="scan">一键检查未互关</button>
+      <button id="export" class="secondary">本地另存为 TXT</button>
+    </div>
+    <p id="exportStatus" class="export-status" role="status" aria-live="polite">读取可导出的结果……</p>
+    <section>
+      <h2>当前未互关 <span id="notFollowingBackCount">0</span></h2>
+      <pre id="notFollowingBack">暂无</pre>
+    </section>
+    <section>
+      <h2>待确认 <span id="unresolvedCount">0</span></h2>
+      <pre id="unresolved">暂无</pre>
+    </section>
+    <section>
+      <h2>本次从粉丝中消失 <span id="unfollowedCount">0</span></h2>
+      <pre id="unfollowed">暂无历史快照</pre>
+    </section>
+    <div class="footer">
+      <span>仅读取当前页面，数据保存在本机。</span>
+      <button id="clear" class="link-button">清除结果</button>
+    </div>
+    <script src="report.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

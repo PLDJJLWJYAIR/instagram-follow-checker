@@ -1,0 +1,11 @@
+{
+  "name": "instagram-follow-checker",
+  "version": "5.2.0",
+  "private": true,
+  "description": "Local-first Chrome extension for checking non-mutual Instagram follows",
+  "scripts": {
+    "test": "node --test scanner.test.cjs",
+    "check": "node --check content-v2.js && node --check popup.js && node --check background.js && node --check report.js"
+  },
+  "engines": { "node": ">=22" }
+}

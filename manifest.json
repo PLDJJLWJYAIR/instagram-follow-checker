@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Follow Checker",
+  "version": "5.2.0",
+  "description": "一键读取当前关注与粉丝，自动续扫并核验没有关注你的账号。",
+  "permissions": ["storage", "activeTab", "tabs", "scripting", "downloads"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content-v2.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
